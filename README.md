@@ -7,7 +7,7 @@ SurfScript.js is a browser library that allows you to catch waves in different b
 To install SurfScript.js as a browser library, simply include the following script tag in your HTML file:
 
 ```html
-<script src="SurfScript.js"></script>
+<script src="surfscript.js"></script>
 ```
 
 🌊 Usage
@@ -108,12 +108,11 @@ longboard
 fish
 funboard
 
-
-
 ## 🌊🏄‍♂️🌊 Catch Some Waves! 🌊🏄‍♀️🌊
 
 That's it! You're now ready to catch waves in any board type you choose with SurfScript.js. If you have any questions or issues, please feel free to open an issue on our [GitHub repository](https://github.com/FedC/surfscript.git). Happy surfing! 🤙🏄‍♂️🌊
 
 ## License
 
-Surfer is MIT licensed.
+surfscript.js is MIT licensed.
+
