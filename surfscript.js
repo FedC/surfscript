@@ -13,7 +13,11 @@ const boardTypes = [
   "The Swell Slayer",
   "The Shark Bait",
   "The Tide Tamer",
-  "The Foamie Folly"
+  "The Foamie Folly",
+  "shortboard",
+  "longboard",
+  "fish",
+  "funboard"
 ];
 
 class Surfer {
