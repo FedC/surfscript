@@ -1,0 +1,19 @@
+{
+  "name": "surfscript",
+  "version": "1.0.0",
+  "description": "A bodacious JavaScript library for surfing the web",
+  "main": "surfscript.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "javascript",
+    "library",
+    "surfing"
+  ],
+  "author": "Federico Commisso",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
