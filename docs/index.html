@@ -1,0 +1,450 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>surfscript.js</title>
+  <meta name="description"
+    content="surfscript.js | The latest and greatest JavaScript library for all your surfing needs.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,500&display=swap">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body id="my-sticky-element">
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- <header class='header-container' id='header'>
+    <div class='header-inner'>
+      <a href="https://codepen.io/fman7">@fman7</a>
+    </div>
+  </header> -->
+
+  <style>
+    /* html {
+      height: 100vh;
+    } */
+
+    body {
+      font-family: Lato, sans-serif;
+      line-height: 1.6;
+      letter-spacing: 1.2px;
+      font-size: 16px;
+    }
+
+    .hero {
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* min-height: 420px; */
+      padding-bottom: 150px;
+      padding-top: 100px;
+      background-color: rgb(13, 17, 39);
+      line-height: 1.4;
+      letter-spacing: 1.5px;
+    }
+
+    article.wrapper {
+      padding: 16px;
+      text-align: center;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    article.wrapper h2 {
+      color:#75E6DA;
+      margin: 40px auto 24px auto;
+    }
+
+    .accent-color {
+      color: #75E6DA;
+      font-weight: bold;
+    }
+
+    .hero-image {
+      background-image: linear-gradient(20deg, rgba(13, 17, 39, 0.18), rgba(13, 17, 39, 0.9)), url("img/hero.png");
+      min-height: 420px;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Place text in the middle of the image */
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      line-height: 1.4;
+      letter-spacing: 1.5px;
+      width: 100%;
+      max-width: 980px;
+    }
+
+    .hero-text h1 {
+      margin-bottom: 60px;
+    }
+
+    .hero-image .voltage-button {
+      width: 316px !important;
+      margin: 0 auto;
+    }
+  </style>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Welcome to <span class='accent-color'>surfscript.js</span>, the latest and greatest JavaScript library for all your surfing needs.</h1>
+      
+      <div class="voltage-button">
+        <a href="https://github.com/FedC/surfscript">
+          <button>Download</button>
+        </a>
+  
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 234.6 61.3" preserveAspectRatio="none" xml:space="preserve">
+          <filter id="glow">
+            <fegaussianblur class="blur" result="coloredBlur" stddeviation="2"></fegaussianblur>
+            <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves="1" result="turbulence"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G" result="displace"></feDisplacementMap>
+            <femerge>
+              <femergenode in="coloredBlur"></femergenode>
+              <femergenode in="coloredBlur"></femergenode>
+              <femergenode in="coloredBlur"></femergenode>
+              <femergenode in="displace"></femergenode>
+              <femergenode in="SourceGraphic"></femergenode>
+            </femerge>
+          </filter>
+          <path class="voltage line-1" d="m216.3 51.2c-3.7 0-3.7-1.1-7.3-1.1-3.7 0-3.7 6.8-7.3 6.8-3.7 0-3.7-4.6-7.3-4.6-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-0.9-7.3-0.9-3.7 0-3.7-2.7-7.3-2.7-3.7 0-3.7 7.8-7.3 7.8-3.7 0-3.7-4.9-7.3-4.9-3.7 0-3.7-7.8-7.3-7.8-3.7 0-3.7-1.1-7.3-1.1-3.7 0-3.7 3.1-7.3 3.1-3.7 0-3.7 10.9-7.3 10.9-3.7 0-3.7-12.5-7.3-12.5-3.7 0-3.7 4.6-7.3 4.6-3.7 0-3.7 4.5-7.3 4.5-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-10-7.3-10-3.7 0-3.7-0.4-7.3-0.4-3.7 0-3.7 2.3-7.3 2.3-3.7 0-3.7 7.1-7.3 7.1-3.7 0-3.7-11.2-7.3-11.2-3.7 0-3.7 3.5-7.3 3.5-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-2.9-7.3-2.9-3.7 0-3.7 8.4-7.3 8.4-3.7 0-3.7-14.6-7.3-14.6-3.7 0-3.7 5.8-7.3 5.8-2.2 0-3.8-0.4-5.5-1.5-1.8-1.1-1.8-2.9-2.9-4.8-1-1.8 1.9-2.7 1.9-4.8 0-3.4-2.1-3.4-2.1-6.8s-9.9-3.4-9.9-6.8 8-3.4 8-6.8c0-2.2 2.1-2.4 3.1-4.2 1.1-1.8 0.2-3.9 2-5 1.8-1 3.1-7.9 5.3-7.9 3.7 0 3.7 0.9 7.3 0.9 3.7 0 3.7 6.7 7.3 6.7 3.7 0 3.7-1.8 7.3-1.8 3.7 0 3.7-0.6 7.3-0.6 3.7 0 3.7-7.8 7.3-7.8h7.3c3.7 0 3.7 4.7 7.3 4.7 3.7 0 3.7-1.1 7.3-1.1 3.7 0 3.7 11.6 7.3 11.6 3.7 0 3.7-2.6 7.3-2.6 3.7 0 3.7-12.9 7.3-12.9 3.7 0 3.7 10.9 7.3 10.9 3.7 0 3.7 1.3 7.3 1.3 3.7 0 3.7-8.7 7.3-8.7 3.7 0 3.7 11.5 7.3 11.5 3.7 0 3.7-1.4 7.3-1.4 3.7 0 3.7-2.6 7.3-2.6 3.7 0 3.7-5.8 7.3-5.8 3.7 0 3.7-1.3 7.3-1.3 3.7 0 3.7 6.6 7.3 6.6s3.7-9.3 7.3-9.3c3.7 0 3.7 0.2 7.3 0.2 3.7 0 3.7 8.5 7.3 8.5 3.7 0 3.7 0.2 7.3 0.2 3.7 0 3.7-1.5 7.3-1.5 3.7 0 3.7 1.6 7.3 1.6s3.7-5.1 7.3-5.1c2.2 0 0.6 9.6 2.4 10.7s4.1-2 5.1-0.1c1 1.8 10.3 2.2 10.3 4.3 0 3.4-10.7 3.4-10.7 6.8s1.2 3.4 1.2 6.8 1.9 3.4 1.9 6.8c0 2.2 7.2 7.7 6.2 9.5-1.1 1.8-12.3-6.5-14.1-5.5-1.7 0.9-0.1 6.2-2.2 6.2z" fill="transparent" stroke="#fff"/>
+          <path class="voltage line-2" d="m216.3 52.1c-3 0-3-0.5-6-0.5s-3 3-6 3-3-2-6-2-3 1.6-6 1.6-3-0.4-6-0.4-3-1.2-6-1.2-3 3.4-6 3.4-3-2.2-6-2.2-3-3.4-6-3.4-3-0.5-6-0.5-3 1.4-6 1.4-3 4.8-6 4.8-3-5.5-6-5.5-3 2-6 2-3 2-6 2-3 1.6-6 1.6-3-4.4-6-4.4-3-0.2-6-0.2-3 1-6 1-3 3.1-6 3.1-3-4.9-6-4.9-3 1.5-6 1.5-3 1.6-6 1.6-3-1.3-6-1.3-3 3.7-6 3.7-3-6.4-6-6.4-3 2.5-6 2.5h-6c-3 0-3-0.6-6-0.6s-3-1.4-6-1.4-3 0.9-6 0.9-3 4.3-6 4.3-3-3.5-6-3.5c-2.2 0-3.4-1.3-5.2-2.3-1.8-1.1-3.6-1.5-4.6-3.3s-4.4-3.5-4.4-5.7c0-3.4 0.4-3.4 0.4-6.8s2.9-3.4 2.9-6.8-0.8-3.4-0.8-6.8c0-2.2 0.3-4.2 1.3-5.9 1.1-1.8 0.8-6.2 2.6-7.3 1.8-1 5.5-2 7.7-2 3 0 3 2 6 2s3-0.5 6-0.5 3 5.1 6 5.1 3-1.1 6-1.1 3-5.6 6-5.6 3 4.8 6 4.8 3 0.6 6 0.6 3-3.8 6-3.8 3 5.1 6 5.1 3-0.6 6-0.6 3-1.2 6-1.2 3-2.6 6-2.6 3-0.6 6-0.6 3 2.9 6 2.9 3-4.1 6-4.1 3 0.1 6 0.1 3 3.7 6 3.7 3 0.1 6 0.1 3-0.6 6-0.6 3 0.7 6 0.7 3-2.2 6-2.2 3 4.4 6 4.4 3-1.7 6-1.7 3-4 6-4 3 4.7 6 4.7 3-0.5 6-0.5 3-0.8 6-0.8 3-3.8 6-3.8 3 6.3 6 6.3 3-4.8 6-4.8 3 1.9 6 1.9 3-1.9 6-1.9 3 1.3 6 1.3c2.2 0 5-0.5 6.7 0.5 1.8 1.1 2.4 4 3.5 5.8 1 1.8 0.3 3.7 0.3 5.9 0 3.4 3.4 3.4 3.4 6.8s-3.3 3.4-3.3 6.8 4 3.4 4 6.8c0 2.2-6 2.7-7 4.4-1.1 1.8 1.1 6.7-0.7 7.7-1.6 0.8-4.7-1.1-6.8-1.1z" fill="transparent" stroke="#fff"/>
+        </svg>
+        <div class="dots">
+          <div class="dot dot-1"></div>
+          <div class="dot dot-2"></div>
+          <div class="dot dot-3"></div>
+          <div class="dot dot-4"></div>
+          <div class="dot dot-5"></div>
+        </div>
+      </div>
+    
+    </div>
+    
+  </div>
+
+  <article class="wrapper">
+
+    <h2>This library will have you hanging ten in no time and coding like a pro surfer.</h2>
+    <p>
+      Here at surfscript.js, we understand that surfing is more than just a sport, it's a lifestyle. So, we've created a library that embodies the surfer spirit, complete with gnarly board types and killer moves.
+    </p>
+
+    <h2>We know what you're thinking: "Another JavaScript library? Oh, great, just what the world needs."</h2>
+
+    <p>
+      But we promise, surfscript.js is different. While other libraries are busy reinventing the wheel, we're busy reinventing the surfboard. Our library is jam-packed with features that will have you feeling like you're out on the waves, even if you're stuck behind a computer screen.
+    </p>
+
+    <img src="img/grid_0-2.png" alt="Surfing styles" width="100%" />
+
+    <h2>
+      We've taken all the best parts of surfing and combined them with the power of JavaScript.
+    </h2>
+
+    <p>
+      So what can you do with surfscript.js? Well, for starters, you can create surfers with different skill levels, board types, and catch waves on different boards. You can also add and remove board types and increase or decrease skill levels. And the best part? You can do it all with a few lines of code.
+    </p>
+
+    <h2>But don't just take our word for it.</h2>
+
+    <p>
+      Check out some of these totally real and not at all made-up testimonials:
+    </p>
+  </article>
+
+  <style>
+    .testimonials {
+      padding: 0 12px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial img {
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .testimonial p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .testimonial cite {
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+
+  <section class="testimonials">
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/200?u=a192281f4w69099384f" alt="Surfing on a hot mess board">
+      <p>"Surfscript.js is the gnarliest thing to hit the web since the <a href="https://en.wikipedia.org/wiki/Netscape_Navigator">Netscape Navigator</a>! With its ability to catch waves in any board type, I can finally shred the gnar on my hot mess board without being called a kook."</p>
+      <cite>- Tabitha, web developer and surf enthusiast</cite>
+    </div>
+    
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/200?u=a142581f4w69098394f" alt="Surfing on a boardom buster board">
+      <p>"As a seasoned surfer, I thought I'd tried it all. But then I discovered Surfscript.js and my mind was blown! Not only can I catch waves on any board type, but I can also increase my skill level at the click of a button. It's like a dream come true!"</p>
+      <cite>- Brian, pro surfer and web developer</cite>
+    </div>
+    
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/200?u=a042581f4e29026704w" alt="Surfing on a wave wrangler board">
+      <p>"Surfscript.js has completely changed the way I surf. With its powerful wave-catching algorithm, I can ride bigger and more powerful waves than ever before. And when I wipe out, the witty error messages always make me smile!"</p>
+      <cite>- Kelly, surfer and JavaScript fanatic</cite>
+    </div>
+  </section>
+
+  <article class="wrapper">
+    <h2>So what are you waiting for?</h2>
+    <p>Come join the surfing revolution. If you don't like it, we'll give you a full refund*.</p>
+    <p><small>*Just kidding, this library is totally free. But we do offer virtual high-fives.</small></p>
+  </article>
+
+  <style>
+    .voltage-button {
+      position: relative;
+    }
+
+    .voltage-button button {
+      color: white;
+      background: #0d1127;
+      padding: 1.6rem 5rem 1.8rem 5rem;
+      border-radius: 5rem;
+      border: 5px solid #5978f3;
+      font-size: 1.8rem;
+      line-height: 1em;
+      letter-spacing: 0.075em;
+      transition: background 0.3s;
+    }
+
+    .voltage-button button:hover {
+      cursor: pointer;
+      background: #0f1c53;
+    }
+
+    .voltage-button svg {
+      display: block;
+      position: absolute;
+      top: -0.75em;
+      left: -0.25em;
+      width: calc(100% + 0.5em);
+      height: calc(100% + 1.5em);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.4s;
+      transition-delay: 0.1s;
+    }
+
+    .voltage-button svg path {
+      stroke-dasharray: 100;
+      filter: url("#glow");
+    }
+
+    .voltage-button svg path.line-1 {
+      stroke: #f6de8d;
+      stroke-dashoffset: 0;
+      animation: spark-1 3s linear infinite;
+    }
+
+    .voltage-button svg path.line-2 {
+      stroke: #6bfeff;
+      stroke-dashoffset: 500;
+      animation: spark-2 3s linear infinite;
+    }
+
+    .voltage-button .dots {
+      opacity: 1;
+      transition: opacity 0.3s;
+      transition-delay: 0.4s;
+    }
+
+    .voltage-button .dots .dot {
+      width: 1rem;
+      height: 1rem;
+      background: white;
+      border-radius: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+
+    .voltage-button .dots .dot-1 {
+      top: 0;
+      left: 20%;
+      animation: fly-up 3s linear infinite;
+    }
+
+    .voltage-button .dots .dot-2 {
+      top: 0;
+      left: 55%;
+      animation: fly-up 3s linear infinite;
+      animation-delay: 0.5s;
+    }
+
+    .voltage-button .dots .dot-3 {
+      top: 0;
+      left: 80%;
+      animation: fly-up 3s linear infinite;
+      animation-delay: 1s;
+    }
+
+    .voltage-button .dots .dot-4 {
+      bottom: 0;
+      left: 30%;
+      animation: fly-down 3s linear infinite;
+      animation-delay: 2.5s;
+    }
+
+    .voltage-button .dots .dot-5 {
+      bottom: 0;
+      left: 65%;
+      animation: fly-down 3s linear infinite;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes spark-1 {
+      to {
+        stroke-dashoffset: -1000;
+      }
+    }
+
+    @keyframes spark-2 {
+      to {
+        stroke-dashoffset: -500;
+      }
+    }
+
+    @keyframes fly-up {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+      }
+
+      5% {
+        opacity: 1;
+        transform: translateY(-1.5rem) scale(0.4);
+      }
+
+      10%,
+      100% {
+        opacity: 0;
+        transform: translateY(-3rem) scale(0.2);
+      }
+    }
+
+    @keyframes fly-down {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+      }
+
+      5% {
+        opacity: 1;
+        transform: translateY(1.5rem) scale(0.4);
+      }
+
+      10%,
+      100% {
+        opacity: 0;
+        transform: translateY(3rem) scale(0.2);
+      }
+    }
+  </style>
+
+  <div class="hero">
+    <div class="voltage-button">
+      <a href="https://github.com/FedC/surfscript">
+        <button>Download</button>
+      </a>
+
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 234.6 61.3" preserveAspectRatio="none" xml:space="preserve">
+        <filter id="glow">
+          <fegaussianblur class="blur" result="coloredBlur" stddeviation="2"></fegaussianblur>
+          <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves="1" result="turbulence"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G" result="displace"></feDisplacementMap>
+          <femerge>
+            <femergenode in="coloredBlur"></femergenode>
+            <femergenode in="coloredBlur"></femergenode>
+            <femergenode in="coloredBlur"></femergenode>
+            <femergenode in="displace"></femergenode>
+            <femergenode in="SourceGraphic"></femergenode>
+          </femerge>
+        </filter>
+        <path class="voltage line-1" d="m216.3 51.2c-3.7 0-3.7-1.1-7.3-1.1-3.7 0-3.7 6.8-7.3 6.8-3.7 0-3.7-4.6-7.3-4.6-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-0.9-7.3-0.9-3.7 0-3.7-2.7-7.3-2.7-3.7 0-3.7 7.8-7.3 7.8-3.7 0-3.7-4.9-7.3-4.9-3.7 0-3.7-7.8-7.3-7.8-3.7 0-3.7-1.1-7.3-1.1-3.7 0-3.7 3.1-7.3 3.1-3.7 0-3.7 10.9-7.3 10.9-3.7 0-3.7-12.5-7.3-12.5-3.7 0-3.7 4.6-7.3 4.6-3.7 0-3.7 4.5-7.3 4.5-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-10-7.3-10-3.7 0-3.7-0.4-7.3-0.4-3.7 0-3.7 2.3-7.3 2.3-3.7 0-3.7 7.1-7.3 7.1-3.7 0-3.7-11.2-7.3-11.2-3.7 0-3.7 3.5-7.3 3.5-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-2.9-7.3-2.9-3.7 0-3.7 8.4-7.3 8.4-3.7 0-3.7-14.6-7.3-14.6-3.7 0-3.7 5.8-7.3 5.8-2.2 0-3.8-0.4-5.5-1.5-1.8-1.1-1.8-2.9-2.9-4.8-1-1.8 1.9-2.7 1.9-4.8 0-3.4-2.1-3.4-2.1-6.8s-9.9-3.4-9.9-6.8 8-3.4 8-6.8c0-2.2 2.1-2.4 3.1-4.2 1.1-1.8 0.2-3.9 2-5 1.8-1 3.1-7.9 5.3-7.9 3.7 0 3.7 0.9 7.3 0.9 3.7 0 3.7 6.7 7.3 6.7 3.7 0 3.7-1.8 7.3-1.8 3.7 0 3.7-0.6 7.3-0.6 3.7 0 3.7-7.8 7.3-7.8h7.3c3.7 0 3.7 4.7 7.3 4.7 3.7 0 3.7-1.1 7.3-1.1 3.7 0 3.7 11.6 7.3 11.6 3.7 0 3.7-2.6 7.3-2.6 3.7 0 3.7-12.9 7.3-12.9 3.7 0 3.7 10.9 7.3 10.9 3.7 0 3.7 1.3 7.3 1.3 3.7 0 3.7-8.7 7.3-8.7 3.7 0 3.7 11.5 7.3 11.5 3.7 0 3.7-1.4 7.3-1.4 3.7 0 3.7-2.6 7.3-2.6 3.7 0 3.7-5.8 7.3-5.8 3.7 0 3.7-1.3 7.3-1.3 3.7 0 3.7 6.6 7.3 6.6s3.7-9.3 7.3-9.3c3.7 0 3.7 0.2 7.3 0.2 3.7 0 3.7 8.5 7.3 8.5 3.7 0 3.7 0.2 7.3 0.2 3.7 0 3.7-1.5 7.3-1.5 3.7 0 3.7 1.6 7.3 1.6s3.7-5.1 7.3-5.1c2.2 0 0.6 9.6 2.4 10.7s4.1-2 5.1-0.1c1 1.8 10.3 2.2 10.3 4.3 0 3.4-10.7 3.4-10.7 6.8s1.2 3.4 1.2 6.8 1.9 3.4 1.9 6.8c0 2.2 7.2 7.7 6.2 9.5-1.1 1.8-12.3-6.5-14.1-5.5-1.7 0.9-0.1 6.2-2.2 6.2z" fill="transparent" stroke="#fff"/>
+        <path class="voltage line-2" d="m216.3 52.1c-3 0-3-0.5-6-0.5s-3 3-6 3-3-2-6-2-3 1.6-6 1.6-3-0.4-6-0.4-3-1.2-6-1.2-3 3.4-6 3.4-3-2.2-6-2.2-3-3.4-6-3.4-3-0.5-6-0.5-3 1.4-6 1.4-3 4.8-6 4.8-3-5.5-6-5.5-3 2-6 2-3 2-6 2-3 1.6-6 1.6-3-4.4-6-4.4-3-0.2-6-0.2-3 1-6 1-3 3.1-6 3.1-3-4.9-6-4.9-3 1.5-6 1.5-3 1.6-6 1.6-3-1.3-6-1.3-3 3.7-6 3.7-3-6.4-6-6.4-3 2.5-6 2.5h-6c-3 0-3-0.6-6-0.6s-3-1.4-6-1.4-3 0.9-6 0.9-3 4.3-6 4.3-3-3.5-6-3.5c-2.2 0-3.4-1.3-5.2-2.3-1.8-1.1-3.6-1.5-4.6-3.3s-4.4-3.5-4.4-5.7c0-3.4 0.4-3.4 0.4-6.8s2.9-3.4 2.9-6.8-0.8-3.4-0.8-6.8c0-2.2 0.3-4.2 1.3-5.9 1.1-1.8 0.8-6.2 2.6-7.3 1.8-1 5.5-2 7.7-2 3 0 3 2 6 2s3-0.5 6-0.5 3 5.1 6 5.1 3-1.1 6-1.1 3-5.6 6-5.6 3 4.8 6 4.8 3 0.6 6 0.6 3-3.8 6-3.8 3 5.1 6 5.1 3-0.6 6-0.6 3-1.2 6-1.2 3-2.6 6-2.6 3-0.6 6-0.6 3 2.9 6 2.9 3-4.1 6-4.1 3 0.1 6 0.1 3 3.7 6 3.7 3 0.1 6 0.1 3-0.6 6-0.6 3 0.7 6 0.7 3-2.2 6-2.2 3 4.4 6 4.4 3-1.7 6-1.7 3-4 6-4 3 4.7 6 4.7 3-0.5 6-0.5 3-0.8 6-0.8 3-3.8 6-3.8 3 6.3 6 6.3 3-4.8 6-4.8 3 1.9 6 1.9 3-1.9 6-1.9 3 1.3 6 1.3c2.2 0 5-0.5 6.7 0.5 1.8 1.1 2.4 4 3.5 5.8 1 1.8 0.3 3.7 0.3 5.9 0 3.4 3.4 3.4 3.4 6.8s-3.3 3.4-3.3 6.8 4 3.4 4 6.8c0 2.2-6 2.7-7 4.4-1.1 1.8 1.1 6.7-0.7 7.7-1.6 0.8-4.7-1.1-6.8-1.1z" fill="transparent" stroke="#fff"/>
+      </svg>
+      <div class="dots">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+        <div class="dot dot-4"></div>
+        <div class="dot dot-5"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class='footer-container'>
+    <footer class='footer wrapper'>
+      <img src="./img/icon-white-bg.svg" alt="icon" id="footer-icon" width="100%" />
+      <span id="copyright" class='text-center' property="dc:rights">&copy;
+        <span property="dc:dateCopyrighted">2023 </span>
+        <span property="dc:publisher">
+          <a href="https://github.com/FedC">fedc.github.io</a></span>
+      </span>
+    </footer>
+  </section>
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+  <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script> -->
+  <!-- <script src="bower_components/animejs/lib/anime.min.js"></script> -->
+  <!-- <script src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script> -->
+
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132907791-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132907791-1');
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "okcoded.com",
+  "homepage": "https://github.com/FedC/fedc.github.io",
+  "authors": [
+    "Federico Commisso"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}

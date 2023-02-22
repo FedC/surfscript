@@ -1,0 +1,434 @@
+:root {
+  --foreground-color: #B1D4E0; 
+  --background-color: #0C2D48;
+  --accent-one-color: #2E8BC0;
+  --accent-two-color: #4C5270;
+  --accent-three-color: #F652A0;
+}
+
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: var(--accent-one-color);
+  text-shadow: none;
+}
+
+::selection {
+  background: var(--accent-one-color);
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: var(--background-color);
+  color: var(--foreground-color);
+  padding: 0.2em 0;
+}
+
+/* ===== Styles ==================================================
+
+   ========================================================================== */
+
+body {
+  font: 16px/26px 'Lato', sans-serif;
+  background-color: var(--background-color);
+}
+
+.title {
+  color: var(--foreground-color);
+}
+
+.main-container {
+  max-width: 980px;
+  width: 90%;
+  margin: auto;
+}
+.main-container.breathing-room {
+  padding-bottom: 100px; /* breathing room */
+}
+
+/* ==============
+  HEADER
+   ============== */
+.header-container {
+  /* background-color: var(--background-color); */
+  color: var(--accent-two-color);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  padding: .5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-inner a {
+  color: var(--accent-two-color);
+  font-size: 28px;
+}
+
+/* .header-inner nav {
+  margin-left: 16px;
+} */
+
+/* ==============
+  FOOTER
+   ============== */
+
+.footer-container {
+  border-top: 1px solid white;
+  border-bottom: 4px solid var(--accent-one-color);
+}
+
+.footer-container footer {
+  padding: 20px 8px;
+}
+
+.footer-container {
+  /* position: fixed; */
+  /* bottom: 0;left: 0; */
+  width: 100%;
+  background-color: var(--accent-two-color);
+  color: var(--background-color);
+}
+
+#footer-icon {
+  width: 3em;
+}
+
+@media screen and (min-width: 640px) {
+  .footer-container {
+    position: relative;
+    top: 0; bottom: 0; left: 0;
+  }
+}
+
+
+/* ==============
+  MOBILE: Menu
+   ============== */
+
+/* nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 16px;
+  position: relative;
+}
+
+nav li::after {
+  content: '';
+  opacity: 0;
+  transition: .2s;
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-one-color);
+  transform: translate3d(0, -100%, 0);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+nav li:hover::after,
+nav li#active::after {
+  opacity: 1;
+  transform: translate3d(0, -300%, 0);
+}
+
+nav a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 16px;
+
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: var(--accent-two-color);
+}
+
+nav a:visited {
+  color: var(--accent-two-color);
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration: none;
+} */
+
+/* ==============
+  MOBILE: Main
+   ============== */
+
+
+/* ===============
+  ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   Begin styles
+   ========================================================================== */
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--foreground-color);
+}
+
+a:visited {
+  color: var(--foreground-color);
+}
+
+a:hover {
+  color: var(--accent-three-color);
+}
+
+a:active {
+  color: var(--accent-three-color);
+}
+
+.list-inline {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+  width: 49%;
+}
+
+.display-block,
+.list-inline li a {
+  display: block;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+  INTERMEDIATE: Menu
+   ==================== */
+
+  /* nav a {
+    margin: 0 1.7%;
+    padding: 25px 2%;
+    margin-bottom: 0;
+  }
+
+  nav li:first-child a {
+    margin-left: 0;
+  }
+
+  nav li:last-child a {
+    margin-right: 0;
+  } */
+
+/* ========================
+  INTERMEDIATE: IE Fixes
+   ======================== */
+
+  /* nav ul li {
+    display: inline-block;
+  }
+
+  .oldie nav a {
+    margin: 0 0.7%;
+  } */
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+  WIDE: CSS3 Effects
+   ==================== */
+
+  .main aside {
+    box-shadow: 0 5px 10px #aaa;
+  }
+
+/* ============
+  WIDE: Menu
+   ============ */
+
+/* ============
+  WIDE: Main
+   ============ */
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+  Maximal Width
+   =============== */
+
+  .wrapper {
+    width: 1026px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+  background: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+  text-decoration: underline;
+  }
+
+  a[href]:after {
+  content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+  content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+  content: "";
+  }
+
+  pre,
+  blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid;
+  }
+
+  thead {
+  display: table-header-group;
+  }
+
+  tr,
+  img {
+  page-break-inside: avoid;
+  }
+
+  img {
+  max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+  orphans: 3;
+  widows: 3;
+  }
+
+  h2,
+  h3 {
+  page-break-after: avoid;
+  }
+}
